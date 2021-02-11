@@ -168,8 +168,6 @@ class Diving_Calculators_Public {
 			case 'lbv':
 				$displacement = (($_POST['formData'][1]['value']== 'salt')? ($_POST['formData'][4]['value']* 1.03): ($_POST['formData'][4]));
 				$bouyancy = ($displacement - $_POST['formData'][3]['value']);
-				echo "displacement $displacement";
-				echo "bouyancy $bouyancy";
 				$air = $_POST['formData'][3]['value'] / (($_POST['formData'][1]['value']== 'salt')? 1.03 : 1)- $_POST['formData'][4]['value'];
 				$value = ($_POST['formData'][4]['value'] / $_POST['formData'][3]['value']-1) * $unit * $water;
 				$value = number_format((float)($value),2);
