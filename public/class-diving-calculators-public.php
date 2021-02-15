@@ -5,19 +5,6 @@
  *
  * @link       https://code-fish.eu
  * @since      1.0.0
- *
- * @package    Diving_Calculators
- * @subpackage Diving_Calculators/public
- */
-
-/**
- * The public-facing functionality of the plugin.
- *
- * Defines the plugin name, version, and two examples hooks for how to
- * enqueue the public-facing stylesheet and JavaScript.
- *
- * @package    Diving_Calculators
- * @subpackage Diving_Calculators/public
  * @author     Choni code-fish <choni@code-fish.eu>
  */
 class Diving_Calculators_Public {
@@ -61,18 +48,6 @@ class Diving_Calculators_Public {
 	 */
 	public function enqueue_styles() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Diving_Calculators_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Diving_Calculators_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/diving-calculators-public.css', array(), $this->version, 'all' );
 
 	}
@@ -110,69 +85,98 @@ class Diving_Calculators_Public {
 	 */
 	public function form_calc() {
 
-		if ($_POST['formData'][0]['value']== 'metric'){
+		$sanitize_form = array();
+		for ( $i=0; $i < count($_POST['formData']); $i++){
+			if ($_POST['formData'][$i]['value']){
+				$sanitize_form[$i] = sanitize_text_field( $_POST['formData'][$i]['value']);
+			}
+			if ($i > 2){
+				$sanitize_form[2] = is_numeric($sanitize_form[$i])?$sanitize_form[2]: 'error';
+			}
+	
+		}
+		
+		if ($sanitize_form[0]== 'metric'){
 			$unit = 10;
 			$unit_name = ' meters';
 			$unit_volume = ' liters';
+			$unit_weight = ' kg';
 		}
-		if ($_POST['formData'][0]['value']== 'imperial'){
+		if ($sanitize_form[0]== 'imperial'){
 			$unit = 32.8084;
 			$unit_name = ' feet';
-			$unit_volume = ' cu feet';
+			$unit_volume = ' cu foot';
+			$unit_weight = ' lbs';
 		}
 		
-		$water = ($_POST['formData'][1]['value']== 'fresh')? 1.02 : 1;
+		$water = ($sanitize_form[1]== 'fresh')? 1.02 : 1;
 
-		switch($_POST['formData'][2]['value'] ){
+		switch($sanitize_form[2] ){
 			case 'mod':
-				$value = ($_POST['formData'][4]['value'] / $_POST['formData'][3]['value']-1) * $unit * $water;
+				$value = ($sanitize_form[4] / $sanitize_form[3]-1) * $unit * $water;
 				$value = number_format((float)($value),2);
-				$result = __('Maximum Operating Depth is ','diving-calculators').$value.$unit_name;
+				$result = esc_attr(__('Maximum Operating Depth is ','diving-calculators').$value.$unit_name);
 				break;
 
 			case 'bnm':
-				$value = $_POST['formData'][3]['value'] /(($_POST['formData'][4]['value'] / $unit ) +1) * $water;
+				$value = $sanitize_form[3] /(($sanitize_form[4] / $unit ) +1) * $water;
 				$value =number_format($value*100);
-				$result = __('The best Nitrox mix is ','diving-calculators').$value.'%';
+				$result = esc_attr(__('The best Nitrox mix is ','diving-calculators').$value.'%');
 				break;
 				
 			case 'ead':
-				$value = (($_POST['formData'][4]['value']+ $unit ) * ((1 - floatval($_POST['formData'][3]['value'])) / 0.79) )- 10;
+				$value = (($sanitize_form[4]+ $unit ) * ((1 - floatval($sanitize_form[3])) / 0.79) )- 10;
 				$value = number_format((float)($value),2);
-				$result = __('Equivalent Air Depth is ','diving-calculators').$value.$unit_name;
+				$result = esc_attr(__('Equivalent Air Depth is ','diving-calculators').$value.$unit_name);
 				break;
 
 			case 'end':
-				$value = (($_POST['formData'][4]['value']+ $unit ) * (1 - floatval($_POST['formData'][3]['value']))- 10) * $water;
+				$value = (($sanitize_form[4]+ $unit ) * (1 - floatval($sanitize_form[3]))- 10) * $water;
 				$value = number_format((float)($value),2);
-				$result = __('Equivalent Narcotic Depth is ','diving-calculators').$value.$unit_name;
+				$result = esc_attr(__('Equivalent Narcotic Depth is ','diving-calculators').$value.$unit_name);
 				break;
 
 			case 'sac':
-				$gas = (($_POST['formData'][0]['value']== 'imperial')? ($_POST['formData'][5]['value']/3000 ): ($_POST['formData'][5]['value']));
-				$value = (($gas * $_POST['formData'][6]['value']) / $_POST['formData'][3]['value']) / (1 +($_POST['formData'][4]['value'] / $unit));
+				$gas = (($sanitize_form[0]== 'imperial')? ($sanitize_form[5]/3000 ): ($sanitize_form[5]));
+				$value = (($gas * $sanitize_form[6]) / $sanitize_form[3]) / (1 +($sanitize_form[4] / $unit));
 				$value = number_format((float)($value),2);
-				$result = __('Surface Air Consumption Rate is ','diving-calculators').$value.$unit_volume. '/min';
+				$result = esc_attr(__('Surface Air Consumption Rate is ','diving-calculators').$value.$unit_volume. '/min');
 				break;
 
 			case 'alt':
 				$c_pressure = ($unit==10) ? 0.000022558 : 0.0000068756;
-				$pressure = exp(5.255876 * log(1 - ($c_pressure * $_POST['formData'][3]['value'])));
+				$pressure = exp(5.255876 * log(1 - ($c_pressure * $sanitize_form[3])));
 				$pressure = number_format((float)($pressure),3);
-				$value = $_POST['formData'][4]['value'] * (1 / $pressure) * (33/34);
+				$value = $sanitize_form[4] * (1 / $pressure) * (33/34);
 				$value = number_format((float)($value),2);
-				$result = __('The surface air pressure is ','diving-calculators').$pressure.' atm. ';
-				$result .= __('Theoretical Ocean Depth is ','diving-calculators').$value.$unit_name;
+				$result = esc_attr(__('The surface air pressure is ','diving-calculators').$pressure.' atm. ');
+				$result .= esc_attr(__('Theoretical Ocean Depth is ','diving-calculators').$value.$unit_name);
 				break;
 
 			case 'lbv':
-				$displacement = (($_POST['formData'][1]['value']== 'salt')? ($_POST['formData'][4]['value']* 1.03): ($_POST['formData'][4]));
-				$bouyancy = ($displacement - $_POST['formData'][3]['value']);
-				$air = $_POST['formData'][3]['value'] / (($_POST['formData'][1]['value']== 'salt')? 1.03 : 1)- $_POST['formData'][4]['value'];
-				$value = ($_POST['formData'][4]['value'] / $_POST['formData'][3]['value']-1) * $unit * $water;
-				$value = number_format((float)($value),2);
-				$result = __('You need a lift capacity of ','diving-calculators').$value.$unit_name. '. The lift bag uses '.$air. 'L of air';
+
+				$water_weight = (($sanitize_form[1]== 'salt')? ($sanitize_form[4]*(34/33)): ($sanitize_form[4]));
+				$displacement_kg = number_format((float)($sanitize_form[3] - $water_weight),2);
+				$displacement_lt = $displacement_kg / ($sanitize_form[1]== 'salt'? (34/33): 1);
+				$displacement_lt = number_format((float)($displacement_lt),2);
+				$air = $displacement_lt * (1 + ($sanitize_form[5] /10 ));
+				$air = number_format((float)($air),2);
+				if($sanitize_form[0]== 'metric'){
+					$result = esc_attr(__('You need a lift capacity of ','diving-calculators').$displacement_kg.$unit_weight.' ('.$displacement_lt.$unit_volume.').');
+					$result .= esc_attr(__(' The lift bag uses ', 'diving-calculators').$air.$unit_volume. __(' of air', 'diving-calculators'));
+				}
+				else{
+					$displacement_lbs = number_format((float)($displacement_kg * 2.20462),2);
+					$displacement_cufoot = number_format((float)($displacement_lt /  28.317),2);
+					$air_imperial = number_format((float)($air / 28.317),2);
+					$result = esc_attr(__('You need a lift capacity of ','diving-calculators').$displacement_lbs.$unit_weight.' ('.$displacement_cufoot.$unit_volume.').');
+					$result .= esc_attr(__(' The lift bag uses ', 'diving-calculators').$air_imperial.$unit_volume. __(' of air', 'diving-calculators'));	
+				}
 				break;
+
+			case 'error':
+				$result = esc_attr(__('Form data is not valid. Insert only numbers','diving-calculators'));
+				break;	
 
 			default:
 				$result = 0;

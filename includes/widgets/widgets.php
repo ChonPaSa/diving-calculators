@@ -170,7 +170,7 @@ class DivingCalculators extends WP_Widget {
 		<?php
 			if ( $instance['mod']){
 				?>
-				<form action="#" method="post" class="diving-calculators-form">
+				<form action="" method="post" class="diving-calculators-form">
 					<input id="diving_calc_type" name="diving_calc_type" value="mod" type="hidden">
 					<?php echo ($instance['accordion'] ? $collap_open : null);?>
 						<h4 class="widget-title">Max. Operation Depth</h4>
@@ -195,7 +195,7 @@ class DivingCalculators extends WP_Widget {
 			}
 			if ( $instance['bnm']){
 				?>
-				<form action="#" method="post" class="diving-calculators-form">
+				<form action="" method="post" class="diving-calculators-form">
 					<input id="diving_calc_type" name="diving_calc_type" value="bnm" type="hidden">
 					<?php echo ($instance['accordion'] ? $collap_open : null);?>
 						<h4 class="widget-title">Best Nitrox Mix</h4>
@@ -220,7 +220,7 @@ class DivingCalculators extends WP_Widget {
 			}
 			if ( $instance['ead']){
 				?>
-				<form action="#" method="post" class="diving-calculators-form">
+				<form action="" method="post" class="diving-calculators-form">
 						<input id="diving_calc_type" name="diving_calc_type" value="ead" type="hidden">
 						<?php echo ($instance['accordion'] ? $collap_open : null);?>
 							<h4 class="widget-title">Equivalent Air Depth</h4>
@@ -244,7 +244,7 @@ class DivingCalculators extends WP_Widget {
 			}
 			if ( $instance['end']){
 				?>
-				<form action="#" method="post" class="diving-calculators-form">
+				<form action="" method="post" class="diving-calculators-form">
 					<input id="diving_calc_type" name="diving_calc_type" value="end" type="hidden">
 					<?php echo ($instance['accordion'] ? $collap_open : null);?>
 						<h4 class="widget-title">Equivalent Narcotic Depth</h4>
@@ -268,7 +268,7 @@ class DivingCalculators extends WP_Widget {
 			}
 			if ( $instance['sac']){
 				?>
-				<form action="#" method="post" class="diving-calculators-form">
+				<form action="" method="post" class="diving-calculators-form">
 					<input id="diving_calc_type" name="diving_calc_type" value="sac" type="hidden">
 					<?php echo ($instance['accordion'] ? $collap_open : null);?>
 						<h4 class="widget-title">Surface Air Consumption</h4>
@@ -291,7 +291,7 @@ class DivingCalculators extends WP_Widget {
 						</tr>	
 							<td><label for="calc_size">Cylinder Size</label></td>
 							<td><input id="calc_size" name="calc_size" maxlength="256" size="5" tabindex="2" value="12.2" type="text" required="required"><br>
-							<small>12L /80 cu feet</small></td>
+							<small>12L /80 cu foot</small></td>
 						</tr>
 					</table>	
 					<p id="diving-calculators-sac-result"> </p>
@@ -302,7 +302,7 @@ class DivingCalculators extends WP_Widget {
 			}
 			if ( $instance['alt']){
 				?>
-				<form action="#" method="post" class="diving-calculators-form">
+				<form action="" method="post" class="diving-calculators-form">
 					<input id="diving_calc_type" name="diving_calc_type" value="alt" type="hidden">
 					<?php echo ($instance['accordion'] ? $collap_open : null);?>
 						<h4 class="widget-title">Altitude Diving</h4>
@@ -326,7 +326,7 @@ class DivingCalculators extends WP_Widget {
 			}
 			if ( $instance['lbv']){
 				?>
-				<form action="#" method="post" class="diving-calculators-form">
+				<form action="" method="post" class="diving-calculators-form">
 					<input id="diving_calc_type" name="diving_calc_type" value="lbv" type="hidden">
 					<?php echo ($instance['accordion'] ? $collap_open : null);?>
 						<h4 class="widget-title">Lift Bag Volume</h4>
@@ -339,7 +339,7 @@ class DivingCalculators extends WP_Widget {
 						</tr>	
 							<td><label for="calc_vol">Object Volumen</label></td>
 							<td><input id="calc_vol" name="calc_vol" maxlength="256" size="5" tabindex="2" value="100" type="text" required="required"><br>
-							<small>liters / cu feet</small></td>
+							<small>liters / cu foot</small></td>
 						</tr>
 						</tr>	
 							<td><label for="calc_depth">Depth</label></td>
