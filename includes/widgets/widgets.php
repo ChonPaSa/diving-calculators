@@ -184,7 +184,7 @@ class DivingCalculators extends WP_Widget {
 						<tr>
 							<td><label for="calc_ppo2"><?php esc_html_e( 'Partial Pressure Oxygen ', 'diving-calculators' ); ?>(ppO<sub>2</sub>)</label></td>
 							<td><input id="calc_ppo2" name="calc_ppo2" maxlength="256" size="5" tabindex="2" value="1.4" type="text" required="required"><br>
-							<small><?php esc_html_e( '1.2 to 1.6 bar', 'diving-calculators' ); ?></small></td>
+							<small><?php esc_html_e( '1.2 to 1.6', 'diving-calculators' ); ?></small></td>
 						</tr>
 					</table>	
 					<p id="diving-calculators-mod-result"> </p>
@@ -204,12 +204,12 @@ class DivingCalculators extends WP_Widget {
 						<tr>
 							<td><label for="calc_ppo2"><?php esc_html_e( 'Maximum Partial Pressure Oxygen ', 'diving-calculators' ); ?>(ppO<sub>2</sub>)</label></td>
 							<td><input id="calc_ppo2" name="calc_ppo2" maxlength="256" size="5" tabindex="2" value="1.4" type="text" required="required"><br>
-							<small><?php esc_html_e( '1.2 to 1.6 bar', 'diving-calculators' ); ?></small></td>
+							<small><?php esc_html_e( '1.2 to 1.6', 'diving-calculators' ); ?></small></td>
 						</tr>	
 						<tr>
 							<td><label for="calc_depth"><?php esc_html_e( 'Maximum Depth', 'diving-calculators' ); ?></label></td>
 							<td><input id="calc_depth" name="calc_depth" maxlength="256" size="5"  tabindex="1" value="35" type="text" required="required"><br>
-							<small><?php esc_html_e( 'meters/ fee', 'diving-calculators' ); ?>t</small></td>
+							<small><?php esc_html_e( 'meters/ feet', 'diving-calculators' ); ?>t</small></td>
 						</tr>
 					</table>	
 					<p id="diving-calculators-bnm-result"> </p>
@@ -281,12 +281,12 @@ class DivingCalculators extends WP_Widget {
 						</tr>	
 							<td><label for="calc_depth"><?php esc_html_e( 'Average Depth', 'diving-calculators' ); ?></label></td>
 							<td><input id="calc_depth" name="calc_depth" maxlength="256" size="5" tabindex="2" value="25" type="text" required="required"><br>
-							<small><?php esc_html_e( 'meters / feet', 'diving-calculators' ); ?> </small></td>
+							<small><?php esc_html_e( 'meters/ feet', 'diving-calculators' ); ?> </small></td>
 						</tr>
 						</tr>	
 							<td><label for="calc_gas"><?php esc_html_e( 'Gas Used', 'diving-calculators' ); ?></label></td>
 							<td><input id="calc_gas" name="calc_gas" maxlength="256" size="5" tabindex="2" value="150" type="text" required="required"><br>
-							<small><?php esc_html_e( '150bar / 2000psi', 'diving-calculators' ); ?></small></td>
+							<small>150bar/ 2000psi</small></td>
 						</tr>
 						</tr>	
 							<td><label for="calc_size"><?php esc_html_e( 'Cylinder Size', 'diving-calculators' ); ?></label></td>
@@ -335,16 +335,16 @@ class DivingCalculators extends WP_Widget {
 						<tr>
 							<td><label for="calc_weight"><?php esc_html_e( 'Object Weight', 'diving-calculators' ); ?></label></td>
 							<td><input id="calc_weight" name="calc_weight" maxlength="256" size="5"  tabindex="1" value="250" type="text" required="required"><br>
-							<small><?php esc_html_e( 'kg / lbs', 'diving-calculators' ); ?></small></td>
+							<small><?php esc_html_e( 'kg/ lbs', 'diving-calculators' ); ?></small></td>
 						</tr>	
 							<td><label for="calc_vol"><?php esc_html_e( 'Object Volumen', 'diving-calculators' ); ?></label></td>
 							<td><input id="calc_vol" name="calc_vol" maxlength="256" size="5" tabindex="2" value="100" type="text" required="required"><br>
-							<small><?php esc_html_e( 'liters / cu foot', 'diving-calculators' ); ?></small></td>
+							<small><?php esc_html_e( 'liters/ cu foot', 'diving-calculators' ); ?></small></td>
 						</tr>
 						</tr>	
 							<td><label for="calc_depth"><?php esc_html_e( 'Depth', 'diving-calculators' ); ?></label></td>
 							<td><input id="calc_depth" name="calc_depth" maxlength="256" size="5" tabindex="2" value="35" type="text" required="required"><br>
-							<small><?php esc_html_e( 'meters / feet', 'diving-calculators' ); ?></small></td>
+							<small><?php esc_html_e( 'meters/ feet', 'diving-calculators' ); ?></small></td>
 						</tr>
 					</table>	
 					<p id="diving-calculators-lbv-result"> </p>

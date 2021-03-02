@@ -4,6 +4,11 @@
 	"description": "Widget for diving calcultions",
 	"author": "Choni <choni@code-fish.eu> (http://choni.code-fish.eu)",
 	"main": "index.js",
+	"browserslist": [
+		"last 2 versions",
+		"> 5%",
+		"Firefox ESR"
+	],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/ChonPaSa/diving-calculators"
@@ -39,11 +44,5 @@
 	"browserify-shim": {
 		"jquery": "$"
 	},
-	"license": "GPL-3.0",
-	"dependencies": {
-		"code-prettify": "^0.1.0",
-		"g": "^2.0.1",
-		"gettext": "0.0.1",
-		"prettify": "^0.1.7"
-	}
+	"license": "GPL-3.0"
 }

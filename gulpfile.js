@@ -8,7 +8,7 @@ var autoprefixer = require( 'gulp-autoprefixer' );
 var rename       = require( 'gulp-rename' );
 var sourcemaps   = require( 'gulp-sourcemaps' );
 var cleanCSS	 = require('gulp-clean-css');
-var wpPot = require('gulp-wp-pot');
+var wpPot 		 = require('gulp-wp-pot');
 
 
 // Project related variables
@@ -23,7 +23,7 @@ var transSRC	 = './**/*.php';
 function css(done) {
 	src( styleSRC )
 		.pipe( sourcemaps.init() )
-		.pipe( autoprefixer({ browsers: [ 'last 2 versions', '> 5%', 'Firefox ESR' ] }) )
+		.pipe( autoprefixer() )
 		.pipe( cleanCSS() )
 		.pipe( rename( { suffix: '.min' } ) )
 		.pipe( sourcemaps.write( mapURL ) )
