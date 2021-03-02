@@ -48,8 +48,10 @@ class Diving_Calculators_Public {
 	 */
 	public function enqueue_styles() {
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/diving-calculators-public.css', array(), $this->version, 'all' );
-
+		if ( is_active_widget(false, false, 'dc', true) ) { 
+			wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/diving-calculators-public.min.css', array(), $this->version, 'all' );
+		 }
+	
 	}
 
 	/**
@@ -71,7 +73,10 @@ class Diving_Calculators_Public {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/diving-calculators-public.js', array( 'jquery' ), $this->version, false );
+		if ( is_active_widget(false, false, 'dc', true) ) { 
+			wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/diving-calculators-public.js', array( 'jquery' ), $this->version, false );
+		}
+		
 
 		wp_localize_script( $this->plugin_name, 'diving_calculators_ajax_object',array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 

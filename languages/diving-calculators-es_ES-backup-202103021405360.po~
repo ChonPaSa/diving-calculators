@@ -7,11 +7,21 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:"
+"1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
+"esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-02 13:33+0000\n"
+"PO-Revision-Date: 2021-03-02 13:33+0000\n"
+"Last-Translator: \n"
+"Language-Team: Spanish (Spain)\n"
+"Language: es_ES\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.1; wp-5.6.2"
 
 #: includes/widgets/widgets.php:22
 msgid "Scuba Diving Calculators"
@@ -25,15 +35,18 @@ msgstr ""
 msgid "Maximum Operation Depth"
 msgstr ""
 
-#: includes/widgets/widgets.php:25, includes/widgets/widgets.php:80, includes/widgets/widgets.php:201
+#: includes/widgets/widgets.php:25, includes/widgets/widgets.php:80,
+#: includes/widgets/widgets.php:201
 msgid "Best Nitrox Mix"
 msgstr ""
 
-#: includes/widgets/widgets.php:26, includes/widgets/widgets.php:86, includes/widgets/widgets.php:226
+#: includes/widgets/widgets.php:26, includes/widgets/widgets.php:86,
+#: includes/widgets/widgets.php:226
 msgid "Equivalent Air Depth"
 msgstr ""
 
-#: includes/widgets/widgets.php:27, includes/widgets/widgets.php:92, includes/widgets/widgets.php:250
+#: includes/widgets/widgets.php:27, includes/widgets/widgets.php:92,
+#: includes/widgets/widgets.php:250
 msgid "Equivalent Narcotic Depth"
 msgstr ""
 
@@ -41,11 +54,13 @@ msgstr ""
 msgid "Surface Air Consumption Rate"
 msgstr ""
 
-#: includes/widgets/widgets.php:29, includes/widgets/widgets.php:104, includes/widgets/widgets.php:308
+#: includes/widgets/widgets.php:29, includes/widgets/widgets.php:104,
+#: includes/widgets/widgets.php:308
 msgid "Altitude Diving"
 msgstr ""
 
-#: includes/widgets/widgets.php:30, includes/widgets/widgets.php:110, includes/widgets/widgets.php:332
+#: includes/widgets/widgets.php:30, includes/widgets/widgets.php:110,
+#: includes/widgets/widgets.php:332
 msgid "Lift Bag Volume"
 msgstr ""
 
@@ -113,7 +128,8 @@ msgstr ""
 msgid "Planned Depth"
 msgstr ""
 
-#: includes/widgets/widgets.php:236, includes/widgets/widgets.php:260, includes/widgets/widgets.php:314, includes/widgets/widgets.php:318
+#: includes/widgets/widgets.php:236, includes/widgets/widgets.php:260,
+#: includes/widgets/widgets.php:314, includes/widgets/widgets.php:318
 msgid "meters/ feet"
 msgstr ""
 
@@ -213,15 +229,18 @@ msgstr ""
 msgid "Theoretical Ocean Depth is "
 msgstr ""
 
-#: public/class-diving-calculators-public.php:172, public/class-diving-calculators-public.php:165
+#: public/class-diving-calculators-public.php:172,
+#: public/class-diving-calculators-public.php:165
 msgid "You need a lift capacity of "
 msgstr ""
 
-#: public/class-diving-calculators-public.php:173, public/class-diving-calculators-public.php:166
+#: public/class-diving-calculators-public.php:173,
+#: public/class-diving-calculators-public.php:166
 msgid " The lift bag uses "
 msgstr ""
 
-#: public/class-diving-calculators-public.php:173, public/class-diving-calculators-public.php:166
+#: public/class-diving-calculators-public.php:173,
+#: public/class-diving-calculators-public.php:166
 msgid " of air"
 msgstr ""
 
