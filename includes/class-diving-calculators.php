@@ -78,6 +78,9 @@ class Diving_Calculators {
 		$this->set_locale();
 		$this->define_public_hooks();
 
+		$this->check_installation_time();
+
+
 	}
 
 	/**
@@ -159,6 +162,85 @@ class Diving_Calculators {
 		$this->loader->add_action( 'wp_ajax_nopriv_form_calc', $plugin_public, 'form_calc' );
 
 	}
+
+	/**
+	 * Checkk the option saved when the plugin was activated
+	 *
+	 * @since    1.1.0
+	 * @access   public
+	 */
+	public function check_installation_time() {
+        $install_date = get_option( 'diving_calculators_activation_time' );
+        
+		if($install_date){
+			$past_date = strtotime( '-7 days' );
+		
+			if ( $past_date >= $install_date ) {
+		
+			add_action( 'admin_notices', array($this, 'display_admin_notice') );
+			}
+		}
+
+		add_action( 'admin_init', array( $this, 'notice'), 5 );
+		
+	}
+
+	/**
+	 * Display admin notice for review
+	 *
+	 * @since    1.1.0
+	 * @access   public
+	 */
+	public function display_admin_notice() {
+
+		global $pagenow;
+
+		if( $pagenow == 'index.php' ){
+
+			$dismiss = esc_url( get_admin_url() . 'index.php?dismiss=1' );
+
+			$delay = esc_url( get_admin_url() . 'index.php?delay=1' );
+  
+			$reviewurl = esc_url( 'https://wordpress.org/support/plugin/'. sanitize_title( $this->get_plugin_name() ) . '/reviews/' );
+		
+			printf(__('<div class="update-nag notice notice-info">
+							<h3>Diving Calculators</h3>
+							<p>Hey, I noticed you’ve been using <strong>Diving Calculators</strong> for a while – that’s awesome! 
+							Could you please do me a BIG favor and give it a 5-star rating on WordPress?</p>
+							<div>
+								<a href="%s" class="button button-primary" target="_blank">Ok, you deserve it</a>
+								<a href="%s" class="button button-secondary">Nope, maybe later</a>
+								<a class="button button-secondary" href="%s" >I already did</a>
+							</div>
+						</div>', $this->get_plugin_name()),$reviewurl, $delay, $dismiss );
+			
+		}
+	}
+
+	/**
+	 * Dismiss or delay the notice 
+	 *
+	 * @since    1.1.0
+	 * @access   public
+	 */
+	function notice(){    
+		if( isset( $_GET['dismiss'] ) && !empty( $_GET['dismiss'] ) ){
+			$dismiss = $_GET['dismiss'];
+			if( $dismiss == 1 ){
+				delete_option ('diving_calculators_activation_time');
+				header("Refresh:0; url=index.php");
+			}
+		}
+		if( isset( $_GET['delay'] ) && !empty( $_GET['delay'] ) ){
+			$delay = $_GET['delay'];
+			if( $delay == 1 ){
+				$get_activation_time = strtotime("now");
+				update_option('diving_calculators_activation_time', $get_activation_time );  
+				header("Refresh:0; url=index.php");
+			}
+		}
+	}
+
 
 	/**
 	 * Run the loader to execute all of the hooks with WordPress.

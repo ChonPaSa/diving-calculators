@@ -13,7 +13,7 @@ Widget for scuba diving calculators
 
 == Description ==
 
-Add Suba Diving calculators to your website with this widget. It includes the following calculators:
+Add Scuba Diving calculators to your website with this widget. It includes the following calculators:
 
 **Maximum Operation Depth**
 
@@ -27,7 +27,7 @@ Add Suba Diving calculators to your website with this widget. It includes the fo
 
 **Altitude Diving**
 
-**Lift Bag Volume **
+**Lift Bag Volume**
 
 
 == Installation ==
@@ -57,9 +57,14 @@ kg -> lbs
 
 
 == Upgrade Notice ==
-None
 
 == Changelog ==
+
+= 1.1 =
+* Ready for translation
+* Spanish translation
+* Performance Upgrade
+* Minify CSS
 
 = 1.0 =
 * Initial Version

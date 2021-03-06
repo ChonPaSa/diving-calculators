@@ -3,7 +3,7 @@
 /**
  *
  * @link              https://code-fish.eu
- * @since             1.0.0
+ * @since             1.1.0
  * @package           Diving_Calculators
  *
  * @wordpress-plugin
@@ -29,7 +29,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'DIVING_CALCULATORS_VERSION', '1.0.0' );
+define( 'DIVING_CALCULATORS_VERSION', '1.1.0' );
 
 /**
  * The code that runs during plugin activation.

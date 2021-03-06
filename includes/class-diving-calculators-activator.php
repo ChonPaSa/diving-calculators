@@ -31,6 +31,10 @@ class Diving_Calculators_Activator {
 	 */
 	public static function activate() {
 
+		//Create option with the activation time
+		$get_activation_time = strtotime("now");
+		add_option('diving_calculators_activation_time', $get_activation_time );  
+
 	}
 
 }
