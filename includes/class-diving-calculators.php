@@ -173,8 +173,7 @@ class Diving_Calculators {
         $install_date = get_option( 'diving_calculators_activation_time' );
         
 		if($install_date){
-			//$past_date = strtotime( '-7 days' );
-			$past_date = strtotime( '-1 days' );
+			$past_date = strtotime( '-7 days' );
 		
 			if ( $past_date >= $install_date ) {
 		
@@ -182,9 +181,8 @@ class Diving_Calculators {
 			}
 		}
 
-		add_action( 'admin_init', array( $this, 'dismiss_notice'), 5 );
-
-		add_action( 'admin_init', array( $this, 'delay_notice'), 5 );
+		add_action( 'admin_init', array( $this, 'notice'), 5 );
+		
 	}
 
 	/**
@@ -198,7 +196,7 @@ class Diving_Calculators {
 		global $pagenow;
 
 		if( $pagenow == 'index.php' ){
-	
+
 			$dismiss = esc_url( get_admin_url() . 'index.php?dismiss=1' );
 
 			$delay = esc_url( get_admin_url() . 'index.php?delay=1' );
@@ -215,17 +213,17 @@ class Diving_Calculators {
 								<a class="button button-secondary" href="%s" >I already did</a>
 							</div>
 						</div>', $this->get_plugin_name()),$reviewurl, $delay, $dismiss );
+			
 		}
 	}
 
-
 	/**
-	 * Remove the notice for the user if review already done 
+	 * Dismiss or delay the notice 
 	 *
 	 * @since    1.1.0
 	 * @access   public
 	 */
-	function dismiss_notice(){    
+	function notice(){    
 		if( isset( $_GET['dismiss'] ) && !empty( $_GET['dismiss'] ) ){
 			$dismiss = $_GET['dismiss'];
 			if( $dismiss == 1 ){
@@ -233,15 +231,6 @@ class Diving_Calculators {
 				header("Refresh:0; url=index.php");
 			}
 		}
-	}
-
-	/**
-	 * Change time in setting to remind user later (7days)
-	 *
-	 * @since    1.1.0
-	 * @access   public
-	 */
-	function delay_notice(){    
 		if( isset( $_GET['delay'] ) && !empty( $_GET['delay'] ) ){
 			$delay = $_GET['delay'];
 			if( $delay == 1 ){
