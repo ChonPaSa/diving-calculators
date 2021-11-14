@@ -3,14 +3,14 @@
 /**
  *
  * @link              https://code-fish.eu
- * @since             1.1.0
+ * @since             1.0.0
  * @package           Diving_Calculators
  *
  * @wordpress-plugin
  * Plugin Name:       Diving Calculators
  * Plugin URI:        https://code-fish.eu/diving-plugins/
  * Description:       Diving Calculators Widget.
- * Version:           1.0.0
+ * Version:           1.1.0
  * Author:            Choni code-fish
  * Author URI:        https://code-fish.eu
  * License:           GPL-2.0+
