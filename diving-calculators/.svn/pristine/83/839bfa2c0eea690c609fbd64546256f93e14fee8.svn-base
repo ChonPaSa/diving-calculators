@@ -1,0 +1,218 @@
+# Copyright (C) 2021 Diving_Calculators
+# This file is distributed under the same license as the Diving_Calculators package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Diving_Calculators\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: includes/widgets/widgets.php:22
+msgid "Scuba Diving Calculators"
+msgstr ""
+
+#: includes/widgets/widgets.php:23, includes/widgets/widgets.php:65
+msgid "Collapse the calculators"
+msgstr ""
+
+#: includes/widgets/widgets.php:24, includes/widgets/widgets.php:74
+msgid "Maximum Operation Depth"
+msgstr ""
+
+#: includes/widgets/widgets.php:25, includes/widgets/widgets.php:80, includes/widgets/widgets.php:201
+msgid "Best Nitrox Mix"
+msgstr ""
+
+#: includes/widgets/widgets.php:26, includes/widgets/widgets.php:86, includes/widgets/widgets.php:226
+msgid "Equivalent Air Depth"
+msgstr ""
+
+#: includes/widgets/widgets.php:27, includes/widgets/widgets.php:92, includes/widgets/widgets.php:250
+msgid "Equivalent Narcotic Depth"
+msgstr ""
+
+#: includes/widgets/widgets.php:28, includes/widgets/widgets.php:98
+msgid "Surface Air Consumption Rate"
+msgstr ""
+
+#: includes/widgets/widgets.php:29, includes/widgets/widgets.php:104, includes/widgets/widgets.php:308
+msgid "Altitude Diving"
+msgstr ""
+
+#: includes/widgets/widgets.php:30, includes/widgets/widgets.php:110, includes/widgets/widgets.php:332
+msgid "Lift Bag Volume"
+msgstr ""
+
+#: includes/widgets/widgets.php:36, includes/widgets/widgets.php:45
+msgid "Diving Calculators"
+msgstr ""
+
+#: includes/widgets/widgets.php:58
+msgid "Calculators Title:"
+msgstr ""
+
+#: includes/widgets/widgets.php:69
+msgid "Choose the calculators:"
+msgstr ""
+
+#: includes/widgets/widgets.php:158
+msgid "Metric "
+msgstr ""
+
+#: includes/widgets/widgets.php:160
+msgid "Imperial"
+msgstr ""
+
+#: includes/widgets/widgets.php:164
+msgid "Salt "
+msgstr ""
+
+#: includes/widgets/widgets.php:166
+msgid "Fresh"
+msgstr ""
+
+#: includes/widgets/widgets.php:169
+msgid "** This will affect all calculations"
+msgstr ""
+
+#: includes/widgets/widgets.php:176
+msgid "Max. Operation Depth"
+msgstr ""
+
+#: includes/widgets/widgets.php:180, includes/widgets/widgets.php:230
+msgid "Fraction of Oxygen "
+msgstr ""
+
+#: includes/widgets/widgets.php:185
+msgid "Partial Pressure Oxygen "
+msgstr ""
+
+#: includes/widgets/widgets.php:187, includes/widgets/widgets.php:207
+msgid "1.2 to 1.6"
+msgstr ""
+
+#: includes/widgets/widgets.php:205
+msgid "Maximum Partial Pressure Oxygen "
+msgstr ""
+
+#: includes/widgets/widgets.php:210
+msgid "Maximum Depth"
+msgstr ""
+
+#: includes/widgets/widgets.php:212, includes/widgets/widgets.php:236, includes/widgets/widgets.php:260, includes/widgets/widgets.php:284, includes/widgets/widgets.php:314, includes/widgets/widgets.php:318, includes/widgets/widgets.php:347
+msgid "meters/ feet"
+msgstr ""
+
+#: includes/widgets/widgets.php:234, includes/widgets/widgets.php:258
+msgid "Planned Depth"
+msgstr ""
+
+#: includes/widgets/widgets.php:254
+msgid "Fraction of Helium "
+msgstr ""
+
+#: includes/widgets/widgets.php:274
+msgid "Surface Air Consumption"
+msgstr ""
+
+#: includes/widgets/widgets.php:278
+msgid "Time at Depth"
+msgstr ""
+
+#: includes/widgets/widgets.php:280
+msgid "minutes"
+msgstr ""
+
+#: includes/widgets/widgets.php:282
+msgid "Average Depth"
+msgstr ""
+
+#: includes/widgets/widgets.php:287
+msgid "Gas Used"
+msgstr ""
+
+#: includes/widgets/widgets.php:292
+msgid "Cylinder Size"
+msgstr ""
+
+#: includes/widgets/widgets.php:294
+msgid "12L /80 cu foot"
+msgstr ""
+
+#: includes/widgets/widgets.php:312
+msgid "Altitude"
+msgstr ""
+
+#: includes/widgets/widgets.php:316
+msgid "Actual Depth"
+msgstr ""
+
+#: includes/widgets/widgets.php:336
+msgid "Object Weight"
+msgstr ""
+
+#: includes/widgets/widgets.php:338
+msgid "kg/ lbs"
+msgstr ""
+
+#: includes/widgets/widgets.php:340
+msgid "Object Volumen"
+msgstr ""
+
+#: includes/widgets/widgets.php:342
+msgid "liters/ cu foot"
+msgstr ""
+
+#: includes/widgets/widgets.php:345
+msgid "Depth"
+msgstr ""
+
+#: public/class-diving-calculators-public.php:123
+msgid "Maximum Operating Depth is "
+msgstr ""
+
+#: public/class-diving-calculators-public.php:129
+msgid "The best Nitrox mix is "
+msgstr ""
+
+#: public/class-diving-calculators-public.php:135
+msgid "Equivalent Air Depth is "
+msgstr ""
+
+#: public/class-diving-calculators-public.php:141
+msgid "Equivalent Narcotic Depth is "
+msgstr ""
+
+#: public/class-diving-calculators-public.php:148
+msgid "Surface Air Consumption Rate is "
+msgstr ""
+
+#: public/class-diving-calculators-public.php:157
+msgid "The surface air pressure is "
+msgstr ""
+
+#: public/class-diving-calculators-public.php:158
+msgid "Theoretical Ocean Depth is "
+msgstr ""
+
+#: public/class-diving-calculators-public.php:177, public/class-diving-calculators-public.php:170
+msgid "You need a lift capacity of "
+msgstr ""
+
+#: public/class-diving-calculators-public.php:178, public/class-diving-calculators-public.php:171
+msgid " The lift bag uses "
+msgstr ""
+
+#: public/class-diving-calculators-public.php:178, public/class-diving-calculators-public.php:171
+msgid " of air"
+msgstr ""
+
+#: public/class-diving-calculators-public.php:183
+msgid "Form data is not valid. Insert only numbers"
+msgstr ""
