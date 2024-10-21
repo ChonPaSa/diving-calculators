@@ -1,14 +1,14 @@
-// Load Gulp...of course
-const { src, dest, task, parallel } = require('gulp');
+// Load Gulp
+import { src, dest, task, parallel } from 'gulp';
 
-// CSS related plugins
-var autoprefixer = require( 'gulp-autoprefixer' );
+// CSS-related plugins
+import autoprefixer from 'gulp-autoprefixer';
+import cleanCSS from 'gulp-clean-css';
+import sourcemaps from 'gulp-sourcemaps';
+import rename from 'gulp-rename';
 
-// Utility plugins
-var rename       = require( 'gulp-rename' );
-var sourcemaps   = require( 'gulp-sourcemaps' );
-var cleanCSS	 = require('gulp-clean-css');
-var wpPot 		 = require('gulp-wp-pot');
+// Translation plugin
+import wpPot from 'gulp-wp-pot';
 
 
 // Project related variables

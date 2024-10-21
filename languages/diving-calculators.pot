@@ -1,4 +1,4 @@
-# Copyright (C) 2021 Diving_Calculators
+# Copyright (C) 2024 Diving_Calculators
 # This file is distributed under the same license as the Diving_Calculators package.
 msgid ""
 msgstr ""
@@ -6,12 +6,57 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-10-21 14:10+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: public/class-diving-calculators-public.php:123
+msgid "Maximum Operating Depth is "
+msgstr ""
+
+#: public/class-diving-calculators-public.php:129
+msgid "The best Nitrox mix is "
+msgstr ""
+
+#: public/class-diving-calculators-public.php:135
+msgid "Equivalent Air Depth is "
+msgstr ""
+
+#: public/class-diving-calculators-public.php:141
+msgid "Equivalent Narcotic Depth is "
+msgstr ""
+
+#: public/class-diving-calculators-public.php:148
+msgid "Surface Air Consumption Rate is "
+msgstr ""
+
+#: public/class-diving-calculators-public.php:157
+msgid "The surface air pressure is "
+msgstr ""
+
+#: public/class-diving-calculators-public.php:158
+msgid "Theoretical Ocean Depth is "
+msgstr ""
+
+#: public/class-diving-calculators-public.php:177, public/class-diving-calculators-public.php:170
+msgid "You need a lift capacity of "
+msgstr ""
+
+#: public/class-diving-calculators-public.php:178, public/class-diving-calculators-public.php:171
+msgid " The lift bag uses "
+msgstr ""
+
+#: public/class-diving-calculators-public.php:178, public/class-diving-calculators-public.php:171
+msgid " of air"
+msgstr ""
+
+#: public/class-diving-calculators-public.php:183
+msgid "Form data is not valid. Insert only numbers"
+msgstr ""
 
 #: includes/widgets/widgets.php:22
 msgid "Scuba Diving Calculators"
@@ -171,48 +216,4 @@ msgstr ""
 
 #: includes/widgets/widgets.php:345
 msgid "Depth"
-msgstr ""
-
-#: public/class-diving-calculators-public.php:123
-msgid "Maximum Operating Depth is "
-msgstr ""
-
-#: public/class-diving-calculators-public.php:129
-msgid "The best Nitrox mix is "
-msgstr ""
-
-#: public/class-diving-calculators-public.php:135
-msgid "Equivalent Air Depth is "
-msgstr ""
-
-#: public/class-diving-calculators-public.php:141
-msgid "Equivalent Narcotic Depth is "
-msgstr ""
-
-#: public/class-diving-calculators-public.php:148
-msgid "Surface Air Consumption Rate is "
-msgstr ""
-
-#: public/class-diving-calculators-public.php:157
-msgid "The surface air pressure is "
-msgstr ""
-
-#: public/class-diving-calculators-public.php:158
-msgid "Theoretical Ocean Depth is "
-msgstr ""
-
-#: public/class-diving-calculators-public.php:177, public/class-diving-calculators-public.php:170
-msgid "You need a lift capacity of "
-msgstr ""
-
-#: public/class-diving-calculators-public.php:178, public/class-diving-calculators-public.php:171
-msgid " The lift bag uses "
-msgstr ""
-
-#: public/class-diving-calculators-public.php:178, public/class-diving-calculators-public.php:171
-msgid " of air"
-msgstr ""
-
-#: public/class-diving-calculators-public.php:183
-msgid "Form data is not valid. Insert only numbers"
 msgstr ""
