@@ -1,0 +1,35 @@
+.diving_calculator_options, .diving_calculator_options tr, .diving_calculator_options td{
+  border: 0;
+}
+
+.diving-calculators-form table, .diving-calculators-form table tr, .diving-calculators-form table td{
+  border: 0;
+}
+
+.dc-collapsible {
+  cursor: pointer;
+  width: 100%;
+  outline: none;
+
+}
+
+.diving-calculators-form {
+  margin-bottom: 20px;
+}
+
+.diving-calculators-form .dc-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.dc-collapsible h4::after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 10px;
+  float: right;
+
+}
+
+.dc-active h4::after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
