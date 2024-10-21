@@ -7,6 +7,9 @@
 node_modules/
 dist/
 
+#svn
+.svn/
+
 # Compiled Java class files
 *.class
 
